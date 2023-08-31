@@ -19,6 +19,7 @@ function RegistroForm() {
     );
     if (guardar) {
       const objDatosRegistro = Object.fromEntries(formData.entries());
+      objDatosRegistro.citas = [];
       console.log(objDatosRegistro);
       alert(`Datos ingresados correctamente:
         Nombre: ${objDatosRegistro.nombres}
@@ -27,10 +28,12 @@ function RegistroForm() {
         Fecha: ${objDatosRegistro.fecha}
         Correo: ${objDatosRegistro.correo}
         Celular:${objDatosRegistro.celular}
-        Usuario:${objDatosRegistro.usuario}`);
+        Usuario:${objDatosRegistro.usuario}
+        citas:${objDatosRegistro.citas};
+        `);
       // Convertir el objeto a JSON y guardar en el almacenamiento local
       localStorage.setItem("DatosRegistro", JSON.stringify(objDatosRegistro));
-      // Redirigir a LoginForm después de guardar los datos
+      // Redirigir a LoginbiForm después de guardar los datos
       navigate("/login"); // Cambia '/login'
     } else {
       alert("No puede haber campos vacíos");

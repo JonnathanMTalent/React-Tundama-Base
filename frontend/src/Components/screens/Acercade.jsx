@@ -12,8 +12,8 @@ function Acercade() {
           src="https://www.youtube.com/embed/Rhy4UmunRNQ"
           width="560"
           height="315"
-          frameborder="0"
-          allowfullscreen="allowfullscreen"
+          frameBorder="0"
+          allowFullScreen="allowfullscreen"
         ></iframe>
       </div>
       <center>

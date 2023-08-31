@@ -1,0 +1,14 @@
+{
+  "citaDoctor": [
+    {
+      "id": 1,
+      "name": "Diana Alejandra",
+      "horario": "Martes 4pm"
+    },
+    {
+      "name": "Jonnathan Monroy Sequeda",
+      "horario": "Jueves 2pm",
+      "id": 1693516279140
+    }
+  ]
+}

@@ -16,7 +16,7 @@ h1 {
 .login-box {
   width: 680px;
   height: 580px;
-  background: rgb(140, 205, 248);
+  background: rgba(140, 205, 248, 0.65);
   color: #000000;
   top: 50%;
   left: 70%;
@@ -127,19 +127,81 @@ h1 {
   color: #4f46d3;
 }
 
-@media screen and (max-width: 700px) {
+/*      INICIA SESION DE RESPONSIVE DESIGN     */
+@media screen and (max-width: 900px) {
   body {
-    background: rgb(25, 125, 143);
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/enfermera.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
   }
-  .main {
+
+  .login-box {
+    width: 400px;
+    height: fit-content;
+    background: rgba(140, 205, 248, 0.429);
+    color: #000000;
+    top: 100%;
+    left: 10rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .panel-derecho {
+    float: inline-end;
     width: 100%;
   }
-  @media screen and (max-width: 400px) {
-    body {
-      background: rgb(186, 226, 122);
-    }
-    .main {
-      width: 100%;
-    }
+
+  .panel-izquierdo {
+    float: inline-start;
+    width: 100%;
   }
+
+  /* termina el media screen de 800 px */
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/enfermera.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+  }
+
+  .login-box {
+    width: 300px;
+    height: fit-content;
+    background: rgba(140, 205, 248, 0.429);
+    color: #000000;
+    top: 100%;
+    left: 7rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .panel-derecho {
+    float: inline-end;
+    width: 100%;
+  }
+
+  .panel-izquierdo {
+    float: inline-start;
+    width: 100%;
+  }
+
+  /* termina el media screen de 400 px */
 }

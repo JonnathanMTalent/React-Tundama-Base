@@ -7,6 +7,12 @@ import LoginForm from './Components/screens/LoginForm.jsx';
 import RegistroForm from './Components/screens/RegistroForm';
 import Acercade from './Components/screens/Acercade';
 import Servicios from './Components/screens/Servicios';
+import ContactForm from './Components/crud/ContactForm';
+import CrudApi from './Components/crud/CrudApi';
+import AgendaCitas from './Components/screens/AgendaCitas';
+import CuentaUsuario from './Components/screens/CuentaUsuario';
+import Inicio from './Components/screens/inicio';
+import EditarCitas from './Components/screens/EditarCitas';
 
 function App() {
     return (
@@ -19,6 +25,12 @@ function App() {
                     <Route path="/registro" element={<RegistroForm />} />
                     <Route path="/acercade" element={<Acercade />} />
                     <Route path="/servicios" element={<Servicios />} />
+                    <Route path="/contactForm" element={<ContactForm />} />
+                    <Route path="/crudApi" element={<CrudApi />} />
+                    <Route path="/agendaCitas" element={<AgendaCitas />} />
+                    <Route path="/cuentaUsuario" element={<CuentaUsuario />} />
+                    <Route path="/inicio" element={<Inicio />} />
+                    <Route path="/editarCitas" element={<EditarCitas />} />
 
                 </Routes>
             </Router>

@@ -1,17 +1,19 @@
 import "../styles/login.css";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 // import bootstrap from "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css";
 
 function LoginForm() {
+  const navigate = useNavigate(); // Obtiene la instancia de history para la redirección
   const [passwordVisible, setPasswordVisible] = useState(true);
   const [intentos, setIntentos] = useState(3);
-  let varIntentos = 3;
   const handleEyeIconClick = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     const usuario = document.getElementById("Correo").value;
     const contrasena = document.getElementById("contrasena").value;
 
@@ -40,7 +42,7 @@ function LoginForm() {
 
     if (Cencontradas.length > 0) {
       alert("Bienvenid@, " + usuario);
-      // Realizar redirección o acción después del inicio de sesión exitoso
+      navigate("/inicio"); // Redireccionando
     } else {
       setIntentos(intentos - 1);
       if (intentos === 1) {
@@ -83,15 +85,16 @@ function LoginForm() {
           </div>
           <input className="check" type="checkbox" id="checkid" />
           <label htmlFor="checkid">Recordar Sesion</label>
-          <a href="b">¿Olvidaste Tu Contraseña?</a>
-          <button className="boton centrar1" onClick={handleLogin}>
+          <Link to={"/registro"}>Olvidaste tu contraseña</Link>
+
+          <button className="boton1" onClick={handleLogin}>
             Iniciar Sesion
           </button>
         </form>
-        <p id="intentosRestantesP" className="centrar1">
-          Intentos restantes: <span className="centrar1">{intentos}</span>
+        <p id="intentosRestantesP" className="">
+          Intentos restantes: <span>{intentos}</span>
         </p>
-        <div className="registro centrar1">
+        <div className="registro ">
           <Link to={"/registro"}>Desea Registrarse</Link>
         </div>
         <center>

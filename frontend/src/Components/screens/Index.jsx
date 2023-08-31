@@ -3,16 +3,6 @@ import "../styles/index.css";
 // import { Link } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
 
-const links = [
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "shop",
-    link: "/shop",
-  },
-];
 const Index = () => {
   return (
     <div>
@@ -31,17 +21,20 @@ const Index = () => {
       <center>
         <nav>
           <center>
-            <Link className="btn btn-outline-info" to={"/registro"}>
+            <Link className="btn btn-info" to={"/registro"}>
               Registrarse
             </Link>
-            <Link className="btn btn-outline-info" to={"/login"}>
+            <Link className="btn btn-info" to={"/login"}>
               Iniciar Sesión
             </Link>
-            <Link className="btn btn-outline-info" to={"/acercade"}>
+            <Link className="btn btn-info" to={"/acercade"}>
               Acerca de Nosotros
             </Link>
-            <Link className="btn btn-outline-info" to={"/servicios"}>
+            <Link className="btn btn-info" to={"/servicios"}>
               Nuestros Servicios
+            </Link>
+            <Link className="btn btn-info" to={"/contactForm"}>
+              Contactanos
             </Link>
           </center>
         </nav>

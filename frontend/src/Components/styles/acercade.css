@@ -32,3 +32,16 @@ h2 {
 .volver {
   position: center;
 }
+
+@media screen and (max-width: 800px) {
+  #video1 {
+    display: flex;
+    right: 1000px;
+    margin-left: 40%;
+    /* display: flex; */
+  }
+
+  #video1 {
+    width: 300px;
+  }
+}

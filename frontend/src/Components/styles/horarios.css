@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 1%;
-  background-image: url(../imagenes/enfermera.jpg);
+  background-image: url(../images/enfermera.jpg);
   background-color: rgb(140, 205, 248);
   background-size: cover;
   font-family: sans-serif;
@@ -88,36 +88,76 @@ td.unavailable {
   color: black;
 }
 
-@media screen and (max-width: 800px) {
-  body {
-    background: rgb(25, 125, 143);
+@media only screen and (max-width: 1000px),
+  (min-device-width: 1000px) and (max-device-width: 1024px) {
+  /* forzando la tabla a no portarse como tabla*/
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
   }
-  .main {
-    width: 100%;
-  }
-  @media screen and (max-width: 400px) {
-    body {
-      background: rgb(185, 159, 155);
-    }
-    .main {
-      width: 100%;
-    }
-  }
-}
 
-@media screen and (max-width: 700px) {
-  body {
-    background: rgb(25, 125, 143);
+  /* Ocultar encabezados de tabla (pero no mostrar: ninguno;, por accesibilidad) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
-  .main {
-    width: 100%;
+
+  tr {
+    margin: 0 0 1rem 0;
   }
-  @media screen and (max-width: 400px) {
-    body {
-      background: rgb(185, 159, 155);
-    }
-    .main {
-      width: 100%;
-    }
+
+  tr:nth-child(odd) {
+    background: #ccc;
+  }
+
+  td {
+    /* Compórtamiento como una "fila" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    font-size: 20px;
+    padding-top: 20px;
+    height: 40px;
+    text-align: end;
+  }
+
+  td:before {
+    /* Ahora como un encabezado de tabla*/
+    position: absolute;
+    /* Los valores superior/izquierdo imitan el relleno*/
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    font-size: 20px;
+  }
+
+  /*
+		
+  aqui podemos nombrar el before de cada td
+		*/
+  td:nth-of-type(1):before {
+    content: "Lugar";
+  }
+  td:nth-of-type(2):before {
+    content: "Médico";
+  }
+  td:nth-of-type(3):before {
+    content: "Fecha";
+  }
+  td:nth-of-type(4):before {
+    content: "Hora";
+  }
+  td:nth-of-type(5):before {
+    content: "Disponibilidad";
   }
 }

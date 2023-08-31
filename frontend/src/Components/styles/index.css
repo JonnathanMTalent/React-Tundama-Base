@@ -13,6 +13,11 @@ body {
   background-attachment: fixed;
 }
 
+.btn {
+  padding: 10px;
+  margin: 10px;
+}
+
 header {
   background: rgba(0, 0, 0, 0.582);
   color: rgb(255, 255, 255);
@@ -63,34 +68,36 @@ footer {
    }  */
 @media screen and (max-width: 800px) {
   body {
-    background: rgb(25, 125, 143);
+    margin: 0;
+    padding: 1%;
+    background-image: url(../images/enfermera.jpg);
+    background-color: rgb(140, 205, 248);
+    background-size: cover;
+    font-family: sans-serif;
+    /* height: 100vh; */
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   .main {
     width: 100%;
-  }
-  @media screen and (max-width: 400px) {
-    body {
-      background: rgb(185, 159, 155);
-    }
-    .main {
-      width: 100%;
-    }
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
   body {
-    background: rgb(25, 125, 143);
+    background: rgb(185, 159, 155);
   }
   .main {
     width: 100%;
   }
-  @media screen and (max-width: 400px) {
-    body {
-      background: rgb(185, 159, 155);
-    }
-    .main {
-      width: 100%;
-    }
+
+  h1 {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 20px;
   }
 }
