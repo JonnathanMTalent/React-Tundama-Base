@@ -3,7 +3,6 @@
 // en este archivo se hace una estructura para los llamados fetch de post, get, put, y delete,, se pueden seguir agragando de querer  hacerlo.
 
 export const helpHttp = () => { //funcion Expresada
-    "../../../frontend/src/helpers/helpHttp.js"
     // Este customFetch es el que usa los 4 métodos de fetch segun sea configurado
     const customFetch = (endpoint, options) => {//el endpoint es la ruta, y las options son los metodos , cabezera etc.
         const defaultHeader = {//esta constante sirve para tener como header del fetch por defecto cuando no se vaya a poner headers
